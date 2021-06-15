@@ -31,15 +31,37 @@
   text-align: center;
   padding: 32px;
 }
+
+form{
+  text-align: center;
+}
+h3{
+  text-align: center;
+}
 </style>
+<script>
+  function validateForm() {
+    var x = document.forms["myForm"]["femail"].value;
+    if (x == "") {
+      alert("Email");
+      return false;
+    }
+  }
+  </script>
 </head>
-<body>
-    
+<body> 
+
 <div class="nav">
     <a href="#Home">Home</a>
     <a href="#Menu">Menu</a>
     <a href="#AboutUs">About Us</a>
     <a href="#ContactUs">Contact Us</a>
-   
-  </div>
+   <h3><br><br>Location and Contact</h3>
+  </div>  
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+      Email: <input type="text" name="femail">
+      <input type="submit" value="Submit">
+    </form>  
+    <h3>TEL:<br>204-414-5599</h3>
+    <h3>1866 NESS AVE. WINNIPEG MB. CANADA</h3>
 </body>
