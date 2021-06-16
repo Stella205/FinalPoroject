@@ -1,124 +1,107 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-  body {
-  background-color: whitesmoke;
-}
-.nav {
-  text-align: center;
-  overflow: hidden;
-  background-color: whitesmoke;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 25px;
-}
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="sass/main.css">
+  <style>
+    .header {
+      text-align: center;
+      padding: 32px;
+    }
 
-.nav a {
-  float: center;
-  font-size: 16px;
-  color: red;
-  text-align: center;
-  font-weight: bold;
-  padding: 30px;
-}
-.nav a:hover {
-  border-top: 5px solid red;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.header {
-  text-align: center;
-  padding: 32px;
-}
-* {
-  box-sizing: border-box;
-}
+    .row {
+      display: grid;
+      display: flex;
+      -ms-grid-row-align: stretch;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
 
-.row {
-  display:grid; 
-  display: flex;
-  -ms-grid-row-align: stretch;
-  -ms-flex-wrap: wrap; 
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
+    /*  four equal columns   */
+    .column {
+      -ms-flex: 25%;
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
 
-/*  four equal columns   */
-.column {
-  -ms-flex: 25%; 
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
+    /* makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+      .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
 
-/* makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-</style>
+    /* makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="nav">
-  <a href="index.html">Home</a>
-  <a href="menu.html">Menu</a>
-  <a href="aboutus.html">About Us</a>
-  <a href="contactus.html">Contact Us</a>
- 
-</div>
-<div class="row">
-  <div class="column">
-    <img src="pictures/Tajino burger.jpg">
-    <img src="pictures/tacino burger.jpg">
-    <img src="pictures/doritofatboyburger.webp">
-    <img src="pictures/spiceypinappleburger.webp">
-    <img src="pictures/doublefatboy.webp">
-    <img src="pictures/s9b7b0c_5c086cc8bd5849539db48bf7dc78c5b1_mv2_d_6192_4128_s_4_2.webp">
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="contactus.html">Contact Us</a>
+
   </div>
-  <div class="column">
-    <img src="pictures/9b7b0c_2487ec9bc3be43e4a310e446c12f40f9_mv2_d_2048_1536_s_2.webp">
-    <img src="pictures/9b7b0c_fba13166b30847869dd67c70e42144a6_mv2.webp">
-    <img src="pictures/9b7b0c_100cd99fce644e9daa4ec1ae09ad1977_mv2.webp">
-    <img src="pictures/pepperonifatboy.webp">
-    <img src="pictures/perrogipoutine.webp">
-    <img src="pictures/pineapplebaconburger.webp">
+  <div class="row">
+    <div class="column">
+      <img src="pictures/Tajino burger.jpg">
+      <img src="pictures/tacino burger.jpg">
+      <img src="pictures/doritofatboyburger.webp">
+      <img src="pictures/spiceypinappleburger.webp">
+      <img src="pictures/doublefatboy.webp">
+      <img src="pictures/s9b7b0c_5c086cc8bd5849539db48bf7dc78c5b1_mv2_d_6192_4128_s_4_2.webp">
+    </div>
+    <div class="column">
+      <img src="pictures/9b7b0c_2487ec9bc3be43e4a310e446c12f40f9_mv2_d_2048_1536_s_2.webp">
+      <img src="pictures/9b7b0c_fba13166b30847869dd67c70e42144a6_mv2.webp">
+      <img src="pictures/9b7b0c_100cd99fce644e9daa4ec1ae09ad1977_mv2.webp">
+      <img src="pictures/pepperonifatboy.webp">
+      <img src="pictures/perrogipoutine.webp">
+      <img src="pictures/pineapplebaconburger.webp">
+    </div>
+    <div class="column">
+      <img src="pictures/9b7b0c_e21aa45eb9b44c5fbf58e229e4de2af7_mv2_d_1500_1506_s_2.webp">
+      <img src="pictures/9b7b0c_6794a80577254bf38342a73cb8909715_mv2.webp">
+      <img src="pictures/poutineweek.webp">
+      <img src="pictures/afterburnerburger.webp">
+      <img src="pictures/9b7b0c_6c9787fae50a446aab07e46f798adab5_mv2.webp">
+      <img src="pictures/fatboys.webp">
+    </div>
+    <div class="column">
+      <img src="pictures/doubles.webp">
+      <img src="pictures/pizzafatboy.webp">
+      <img src="pictures/doublewingburger.webp">
+      <img src="pictures/thanksgivingburger.webp">
+      <img src="pictures/freepress.webp">
+      <img src="pictures/perrogipoutine2.webp">
+    </div>
   </div>
-  <div class="column">
-    <img src="pictures/9b7b0c_e21aa45eb9b44c5fbf58e229e4de2af7_mv2_d_1500_1506_s_2.webp">
-    <img src="pictures/9b7b0c_6794a80577254bf38342a73cb8909715_mv2.webp">
-    <img src="pictures/poutineweek.webp">
-    <img src="pictures/afterburnerburger.webp">
-    <img src="pictures/9b7b0c_6c9787fae50a446aab07e46f798adab5_mv2.webp">
-    <img src="pictures/fatboys.webp">
-  </div>
-  <div class="column">
-    <img src="pictures/doubles.webp">
-    <img src="pictures/pizzafatboy.webp">
-    <img src="pictures/doublewingburger.webp">
-    <img src="pictures/thanksgivingburger.webp">
-    <img src="pictures/freepress.webp">
-    <img src="pictures/perrogipoutine2.webp">
-  </div>
-</div>
 </body>
+
 </html>

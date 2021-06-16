@@ -1,67 +1,90 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-  body {
-  background-color: whitesmoke;
-}
-.nav {
-  text-align: center;
-  overflow: hidden;
-  background-color: whitesmoke;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 25px;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="sass/main.css">
+  <style>
 
-.nav a {
-  float: center;
-  font-size: 16px;
-  color: red;
-  text-align: center;
-  font-weight: bold;
-  padding: 30px;
-}
-.nav a:hover {
-  border-top: 5px solid red;
-}
-
-.header {
-  text-align: center;
-  padding: 32px;
-}
-
-form{
-  text-align: center;
-}
-h3{
-  text-align: center;
-}
-</style>
-<script>
-  function validateForm() {
-    var x = document.forms["myForm"]["femail"].value;
-    if (x == "") {
-      alert("Email");
-      return false;
+    .header {
+      text-align: center;
+      padding: 32px;
     }
-  }
+
+    form {
+      text-align: center;
+      color: aliceblue;
+    }
+
+    h3 {
+      text-align: center;
+      color: white;
+      vertical-align: text-top;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px grey;
+    }
+
+    #roundcorners {
+      border-radius: 5px;
+      background: rgb(211, 48, 48);
+      padding: 125px;
+      width: 1015px;
+      height: 350px;
+    }
+
+    .h3-1 {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bolder;
+      letter-spacing: 2px;
+      line-height: 5px;
+      text-shadow: 1px 1px grey;
+    }
+
+    .map {
+      text-align: center;
+    }
+  </style>
+  <script>
+    function validateForm() {
+      var x = document.forms["myForm"]["femail"].value;
+      if (x == "") {
+        alert("Enter an email");
+      }
+      else {
+        window.location.href="mailto:contact@stjamesburger.com";
+      }
+    }
   </script>
 </head>
-<body> 
 
-<div class="nav">
-    <a href="#Home">Home</a>
-    <a href="#Menu">Menu</a>
-    <a href="#AboutUs">About Us</a>
-    <a href="#ContactUs">Contact Us</a>
-   <h3><br><br>Location and Contact</h3>
-  </div>  
-    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+<body>
+
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="contactus.html">Contact Us</a>
+  </div>
+  <div id="roundcorners">
+    <h3 class="h3-1">Location and Contact</h3>
+    <form name="myForm"  method="post">
       Email: <input type="text" name="femail">
-      <input type="submit" value="Submit">
-    </form>  
+      <input type="submit" value="Submit" onclick="validateForm()">
+    </form>
     <h3>TEL:<br>204-414-5599</h3>
     <h3>1866 NESS AVE. WINNIPEG MB. CANADA</h3>
+    <div id="map" style="width: 100%"><iframe width="500px" height="250px" frameborder="0" scrolling="yes"
+        marginheight="0" marginwidth="0"
+        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1866%20NESS%20AVE%20.%20WINNIPEG%20MB.%20CANADA+(st.james%20burger%20chip.co)&amp;t=p&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+      </iframe>
+      <img width="500px" height="250px"
+        src="https://static.wixstatic.com/media/9b7b0c_983d15b1085f4ae099834e2788b942c7~mv2_d_2048_1536_s_2.jpg/v1/fill/w_726,h_537,al_c,q_85,usm_0.66_1.00_0.01/23120091_308716646273673_536908580610970.webp">
+    </div>
 </body>
